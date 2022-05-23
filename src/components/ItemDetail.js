@@ -2,6 +2,7 @@ import { ItemCount } from "./ItemCount"
 import './Styles/ItemDetail.css'
 import { useState } from "react";
 import OptionButtons from "./Buttons";
+import { useCartContext } from "../CartContext/CartContext";
 
 
 const ItemDetail = ({product}) => {
@@ -11,9 +12,14 @@ const ItemDetail = ({product}) => {
     setInputType ('input')
   }
 
+  const {addCart, cartList} = useCartContext()
+
   function onAdd (quantity) {
     console.log(`${quantity} ${product.name}`)
+    addCart({...product, quantity})
   }
+
+  //console.log(cartList)
  
   return (
     

@@ -1,0 +1,146 @@
+.caja { 
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  color: #ffffff; 
+  font-size: 18px; 
+  font-weight: 400; 
+  text-align: center; 
+  background: transparent; 
+  margin: 0 0 25px; 
+  overflow: hidden; 
+  padding: 20px; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px; 
+  border: 2px solid #5c5f4b;}
+
+
+/* Button */
+
+.container {
+    padding: 2em;
+  }
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button {
+  background: none;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 0,5em 1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #5c5f4b;
+}
+
+.btn-4::before {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .btn-4::after {
+    background: #5c5f4b;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .btn-4:hover:after {
+    height: 0;
+    left: 50%;
+    top: 50%;
+    width: 0;
+  }
+
+  /* texto */
+
+.text {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 3em;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 100px;
+}
+
+.text:hover {
+    animation-play-state: paused;
+}
+
+@keyframes text-shadow {
+  0% {  
+      transform: translateY(0);
+      text-shadow: 
+          0 0 0 #0c2ffb, 
+          0 0 0 #2cfcfd, 
+          0 0 0 #fb203b, 
+          0 0 0 #fefc4b;
+  }
+
+  20% {  
+      transform: translateY(-1em);
+      text-shadow: 
+          0 0.125em 0 #b3b976, 
+          0 0.25em 0 #f0f7f7, 
+          0 -0.125em 0 #5c5152, 
+          0 -0.25em 0 #fefc4b;
+  }
+
+  40% {  
+      transform: translateY(0.5em);
+      text-shadow: 
+          0 -0.0625em 0 #b3b976, 
+          0 -0.125em 0 #f0f7f7, 
+          0 0.0625em 0 #5c5152, 
+          0 0.125em 0 #fefc4b;
+  }
+  
+ 60% {
+      transform: translateY(-0.25em);
+      text-shadow: 
+          0 0.03125em 0 #b3b976, 
+          0 0.0625em 0 #f0f7f7, 
+          0 -0.03125em 0 #5c5152, 
+          0 -0.0625em 0 #fefc4b;
+  }
+
+  80% {  
+      transform: translateY(0);
+      text-shadow: 
+          0 0 0 #b3b976, 
+          0 0 0 #f0f7f7, 
+          0 0 0 #5c5152, 
+          0 0 0 #fefc4b;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
