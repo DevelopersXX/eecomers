@@ -3,7 +3,11 @@ import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from "react-router-dom";
 import "./Styles/CartWidget.css"
 
+
 const CartWidget = () => {
+
+ 
+
   return (
     <div className="cart-widget">
       <NavLink to= '/cart'>

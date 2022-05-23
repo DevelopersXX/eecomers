@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import "./Styles/ItemListContainer.css"
 import ItemList from "./ItemList"
 import { getFetch } from "./Data/getFetch"
+import Loader from "./Loader";
 
 
 
@@ -32,7 +33,7 @@ const ItemListContainer = ()=>{
 
         <div className="container">
             {loading ?
-            <h2>Loading...</h2>
+            <Loader/>
             :
             <ItemList items={products}/>
             }

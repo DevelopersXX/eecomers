@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 import {getFetch} from './Data/getFetch'
+import Loader from "./Loader";
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
@@ -21,7 +22,7 @@ export const ItemDetailContainer = () => {
     return(
         <div>
             {loader ?
-            <h2>Loading...</h2>
+            <Loader/>
             :    
 
             <ItemDetail product = {product} />
