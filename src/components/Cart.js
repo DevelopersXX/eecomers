@@ -10,7 +10,7 @@ export const Cart = () => {
   return (
     <div className="container">
       {cartList.map(product => <li className="caja"> {product.name} - ${product.price} - {product.quantity} </li>)}
-      {cartList.length ? (<button className="btn-4"onClick={deleteCart}
+      {cartList.length ? (<button className="btn-4 button1"onClick={deleteCart}
 >Vaciar Carrito</button>) : <p className="text">No hay productos en el carrito</p>
 }
     </div>

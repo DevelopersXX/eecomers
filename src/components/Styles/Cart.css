@@ -20,15 +20,15 @@
     padding: 2em;
   }
 
-button,
-button::after {
+
+.button1::after {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-button {
+.button1 {
   background: none;
   border: 3px solid #fff;
   border-radius: 5px;
@@ -42,15 +42,15 @@ button {
   text-transform: uppercase;
 }
 
-button::before,
-button::after {
+.button1::before,
+.button1::after {
   background: #fff;
   content: '';
   position: absolute;
   z-index: -1;
 }
 
-button:hover {
+.button1:hover {
   color: #5c5f4b;
 }
 
@@ -94,9 +94,9 @@ button:hover {
   0% {  
       transform: translateY(0);
       text-shadow: 
-          0 0 0 #0c2ffb, 
-          0 0 0 #2cfcfd, 
-          0 0 0 #fb203b, 
+          0 0 0 #b3b976, 
+          0 0 0 #f0f7f7, 
+          0 0 0 #5c5152, 
           0 0 0 #fefc4b;
   }
 

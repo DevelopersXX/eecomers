@@ -8,7 +8,7 @@ const CartWidget = () => {
     <div className="cart-widget">
       <NavLink to= '/cart'>
         <FontAwesomeIcon icon={faCartShopping} size="2x" color="white" />
-        <div className="qty-display">6</div>
+        <div className="qty-display">0</div>
       </NavLink>
     </div>
   );
