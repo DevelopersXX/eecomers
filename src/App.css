@@ -2,13 +2,13 @@
 
 
 :root{
-  --bg-color:#ffc9ec;
-  --letra-color: #584391;
-  --boton-color: #ec95ff;
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
+  --bg-color:#ece581;
+  --letra-color: #d6d6c2;
+  --boton-color: #a4ce32;
+  --glow-color: rgb(19, 8, 32);
+  --glow-spread-color: rgba(238, 247, 162, 0.781);
+  --enhanced-glow-color: rgb(90, 97, 82);
+  --btn-color: rgb(19, 8, 32);
 }
 
 *{
@@ -21,5 +21,6 @@
 body{
   text-align: center;
   background-image: url(./images/fondo.jpg);
+  background-size: cover;
 
 }
