@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 import CartWidget from "./CartWidget";
 import "./Styles/NavBar.css";
-import logo from '../images/Logo 2 (2).png'
+import logo from './images/Logo 2 (2).png'
 import { FiMenu } from "react-icons/fi";
 import { FiChevronLeft } from "react-icons/fi";
 

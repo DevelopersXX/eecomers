@@ -1,3 +1,8 @@
+import Cuadrada from '../images/cuadrada.jpg'
+import Hexagonal from '../images/hexagonal.jpg'
+import Triangular from '../images/triangular.jpg'
+
+
 const products = [
     { 
         id: "1", 
@@ -5,7 +10,7 @@ const products = [
         name: "Maceta de Cemento Cuadrada",     
         price:100, 
         stock:9, 
-        img: ""
+        img: Cuadrada
     },
     { 
         id: "2", 
@@ -13,7 +18,7 @@ const products = [
         name: "Maceta de Cemento Hexagonal",     
         price:200,  
         stock:8, 
-        img: ""
+        img: Hexagonal
     },
     { 
         id: "3", 
@@ -21,7 +26,7 @@ const products = [
         name: "Maceta de Cemento Triangular",      
         price:300,  
         stock:2, 
-        img: ""
+        img: Triangular
     },
     { 
         id: "4", 

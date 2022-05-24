@@ -20,7 +20,7 @@
 
 body{
   text-align: center;
-  background-image: url(./images/fondo.jpg);
+  background-image: url(../src/components/images/fondo.jpg);
   background-size: cover;
 
 }

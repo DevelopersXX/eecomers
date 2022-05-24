@@ -19,9 +19,8 @@
 
 .imgCard{
     width: 100%;
-    
-    text-align: center;
-    
+    height: 300px;
+    text-align: center; 
     display: block;
     
 }
