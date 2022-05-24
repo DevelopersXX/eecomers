@@ -27,12 +27,19 @@ const CartContextProvider = ({children}) =>{
         }
     };
 
-    const deleteItem = (id) => {
-        const newCart = [...cartList];
-        let index = newCart.findIndex((products) => products.id === id);
-        newCart.splice(index, 1);
+    // const deleteItem = (id) => {
+    //     const newCart = [...cartList];
+    //     let index = newCart.findIndex((products) => products.id === id);
+    //     newCart.splice(index, 1);
 
-        setcartList([...newCart])
+    //     setcartList([...newCart])
+    // }
+
+    function deleteItem(id) {
+        const newCartList = cartList;
+        let i = newCartList.findIndex((product) => product.id === id);
+        newCartList.splice(i,1);
+        setcartList([...newCartList]);
     }
 
     const deleteCart = () =>{
