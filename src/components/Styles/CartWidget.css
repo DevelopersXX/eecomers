@@ -5,3 +5,14 @@
     padding-left: 40px;
     color: white;
 }
+
+.qty-display{
+    display: flex;
+    flex-direction: column;
+    margin-top: -15px;
+    margin-left: 120px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 25px;
+    color: black;
+}

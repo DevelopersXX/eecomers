@@ -1,23 +1,7 @@
-.caja { 
-  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-  color: #ffffff; 
-  font-size: 18px; 
-  font-weight: 400; 
-  text-align: center; 
-  background: transparent; 
-  margin: 0 0 25px; 
-  overflow: hidden; 
-  padding: 20px; 
-  border-radius: 35px 0px 35px 0px; 
-  -moz-border-radius: 35px 0px 35px 0px; 
-  -webkit-border-radius: 35px 0px 35px 0px; 
-  border: 2px solid #5c5f4b;}
-
-
 /* Button */
 
 .container {
-    padding: 2em;
+    padding: 1em;
   }
 
 
@@ -34,10 +18,10 @@
   border-radius: 5px;
   color: #fff;
   display: block;
-  font-size: 1.6em;
+  font-size: 0,6em;
   font-weight: bold;
-  margin: 1em auto;
-  padding: 0,5em 1em;
+  margin: 0,5em auto;
+  padding: 0,2em 0,5em;
   position: relative;
   text-transform: uppercase;
 }
@@ -84,6 +68,8 @@
     font-weight: 900;
     line-height: 1;
     margin-top: 100px;
+    margin-bottom: 70px;
+    color: #493840;
 }
 
 .text:hover {
@@ -188,5 +174,126 @@
 }
 .delete-item:hover span{
   animation-play-state: paused;
+}
+
+/* color de texto */
+
+.parr {
+ color: aliceblue;
+}
+
+/* comprar */
+
+.comprar {
+  letter-spacing: 8px;
+  text-shadow: #f0f7f7 0 0, #493840 0 0;
+  transition: text-shadow 200ms;
+  text-decoration: none;
+  text-align: center;
+}
+
+.comprar:hover{
+  text-shadow: #7d9b9b -5px 0, #803a5b 5px 0;
+}
+
+/* tabla */
+.cart .table {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.cart .table .thead tr th{
+  border-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 0px;
+  color: white;
+
+}
+
+.cart .table .tbody tr td{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.total{
+  width: 200px;
+}
+
+.cart-total{
+  margin-top: 0px;
+  margin-left:-30px;
+  text-align: center;
+}
+
+/* boton lista */
+.But-lista{
+  background: transparent;
+}
+
+.btn {
+  position: relative;
+  color: white;
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+}
+
+span {
+  transition: all 0.3s;
+  transform: scale(1, 1);
+}
+
+.btn::before, .btn::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.btn-two::before, .btn-two::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-two:hover::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+.btn-two:hover::before {
+  animation-name: rotateccw; 
+  animation-duration: 3s;
+}
+.btn-two:hover::after, .btn-two:hover::before {
+  left: 96px;
+  width: 64px;
+  
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
 }
 
