@@ -45,14 +45,14 @@ const CartContextProvider = ({children}) =>{
     }
 
 
-    //const eliminarItem = (id) =>{}
+    //const eliminarItem
 
     const deleteCart = () =>{
         setcartList ([])
     }
 
     return(
-        <CartContext.Provider value={ {
+        <CartContext.Provider value={{
              cartList,
              addCart,
              deleteCart,
@@ -64,21 +64,5 @@ const CartContextProvider = ({children}) =>{
         </CartContext.Provider>
     )
 }
-
-/*
-function addCart (item){
-    if (inCart(item.id)){
-        let i = cartList.findIndex(product => product.id === item.id)
-        const newCartList = cartList
-        newCartList[i].quantity += item.quantity
-        setcartList(newCartList)
-    }else{
-        setcartList([
-            ...cartList,
-            item
-        ])
-    }
-}
-*/
 
 export default CartContextProvider

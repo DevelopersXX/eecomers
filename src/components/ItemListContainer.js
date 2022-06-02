@@ -2,30 +2,35 @@ import { useState,useEffect } from "react"
 import { useParams } from "react-router-dom"
 import "./Styles/ItemListContainer.css"
 import ItemList from "./ItemList"
-import { getFetch } from "./Data/getFetch"
 import Loader from "./Loader";
-
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
 
 const ItemListContainer = ()=>{
-    const [products, setItem] = useState([])
+    const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-
+    
     const {category} = useParams()    
-
+    
     useEffect(()=>{
+        const db = getFirestore()
+        
         if(category){
-            getFetch()
-                .then(resp => setItem(resp.filter((prods)=>prods.category === category)))
+            const queryCollection = collection(db,"items")   
+            const queryCollectionFilter = query(queryCollection, where("category", "==" , category))
+            getDocs(queryCollectionFilter)
+                .then (resp => setItems(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
                 .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
+                .finally (()=>setLoading(false)) 
+                
         }else{
-            getFetch()
-                .then(resp => setItem(resp))
-                .catch((err)=>console.log(err))
-                .finally (()=>setLoading(false))
-
+            const queryCollection = collection(db,"items")
+            getDocs(queryCollection)
+            .then (resp => setItems(resp.docs.map(product => ({ id:product.id, ...product.data() }))))
+            .catch((err)=>console.log(err))
+            .finally (()=>setLoading(false))          
         }
+
     }, [category])
     
       
@@ -35,7 +40,7 @@ const ItemListContainer = ()=>{
             {loading ?
             <Loader/>
             :
-            <ItemList items={products}/>
+            <ItemList items={items}/>
             }
         </div>
     )
