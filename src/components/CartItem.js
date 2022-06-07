@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useCartContext } from "../CartContext/CartContext.js"
 import "./Styles/CartItem.css"
 
@@ -31,10 +30,6 @@ export default function CartItem({product}) {
                     <td>
                         <div className="counter">
                             <h5>{product.quantity}</h5>
-                          
-                            
-                    
-
                         </div>
                     </td>
                     <td>

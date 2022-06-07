@@ -14,12 +14,15 @@ const ItemDetail = ({product}) => {
 
   const {addCart, cartList} = useCartContext()
 
+  // function onAdd (quantity) {
+  //   addCart({...product, quantity})
+  // }
+
   function onAdd (quantity) {
     console.log(`${quantity} ${product.name}`)
     addCart({...product, quantity})
   }
 
-  //console.log(cartList)
  
   return (
     

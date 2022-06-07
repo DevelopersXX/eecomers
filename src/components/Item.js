@@ -3,7 +3,7 @@ import "./Styles/Item.css"
 
 
 
-const Item = ({name, price,img,id}) =>{
+const Item = ({name, price, img, id}) =>{
     return(
         <div className="gallery">
         <Link to= {`/detail/${id}`} >
